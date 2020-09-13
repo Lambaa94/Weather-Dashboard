@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://bootswatch.com/3/united/bootstrap.min.css">
+    <title>Weather Dashboard</title>
+</head>
+
+<body>
+    <!-- NavBar -->
+    <nav class="navbar navbar-light bg-light">
+        <span class="navbar-brand mb-0 h1">Weather Dashboard</span>
+    </nav>
+    <!-- End NavBar -->
+
+    <!-- Search For City -->
+    <section class="container">
+        <section class="row">
+            <section class="col-sm-3">
+
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" id="current-city">Search</button>
+                </form>
+
+                <div id="city-list"></div>
+            </section>
+
+            <!-- prepend city here -->
+            <!-- End of Search col -->
+
+
+            <section class="col-sm-9">
+                <div class="card border">
+                    <div class="card-header">
+                        Featured
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title" id="cityName">This is where the City will go with the date and symbol
+                        </h5>
+                        <h4 id="temp">This is the Temp</h4>
+                        <h4 id="hum">Humidity</h4>
+                        <h4 id="wind">Wind Speed</h4>
+                        <h4 id="uv">UV Index</h4>
+                    </div>
+                    <div class="card-footer text-muted">
+                        Todays Up To Date Forecast
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section class="row">
+            <section class="col-sm-2">
+                <!-- placeholder -->
+            </section>
+        
+        <!-- 5 Day Forecast -->
+        <section class="col-sm-2" id="1">1111111111</section>
+        <section class="col-sm-2" id="2">2222222222</section>
+        <section class="col-sm-2" id="3">34333333333</section>
+        <section class="col-sm-2" id="4">44444444444</section>
+        <section class="col-sm-2" id="5">55555555555</section>
+        </section>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
