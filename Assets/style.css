@@ -1,0 +1,65 @@
+
+body {
+    background-color: darkgrey ;
+}
+
+.navbar {
+    background-color: slategray;
+    text-align: center;
+    justify-content: center;
+}
+
+.footer {
+    background-color: slategray;
+}
+
+#mainW {
+    background-color: turquoise;
+}
+
+
+
+
+#d1 {
+    
+    background-color: skyblue;
+   
+    
+}
+
+#d2 {
+    color: silver;
+    background-color: royalblue;
+ 
+   
+
+}
+
+#d3 {
+    color: silver;
+    background-color: slateblue;
+  
+    
+
+}
+
+#d4 {
+    color: silver;
+    background-color: steelblue;
+    
+   
+
+}
+
+#d5 {
+    
+    background-color: silver;
+    
+
+}
+
+.city-btn {
+    width: 100%;
+    float: left;
+}
+

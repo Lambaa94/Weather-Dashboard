@@ -4,128 +4,122 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://bootswatch.com/3/united/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+    <link rel="stylesheet" href="Assets/style.css" />
     <title>Weather Dashboard</title>
 </head>
 
 <body>
     <!-- NavBar -->
-    <nav class="navbar navbar-light bg-light">
-        <span class="navbar-brand mb-0 h1">Weather Dashboard</span>
+    <nav class="navbar">
+        <h1 class="navbar-brand mb-0 h1">Weather Dashboard</h1>
     </nav>
     <!-- End NavBar -->
- <section class="container">
-    <!-- Search For City -->
-    <section class="row">
-        <section class="col-sm-3">
-
-            <form class="form-inline">
-                <div class="form-group mx-sm-3 mb-2">
-                  <label for="userInput" class="sr-only">City Name</label>
-                  <input type="search" class="form-control" id="userInput" placeholder="City Name">
-                </div>
-                <button type="submit" class="btn btn-primary mb-2">Search</button>
-              </form>
-
-            <form id="city-list"></form>
-        </section>
-
-    
-   
-    
-            <!-- prepend city here -->
-            <!-- End of Search col -->
-
-            <section class="row">
-            <section class="col-sm-9">
-                <div class="card">
-                    <h3 class="card-header">
-                        THE CITY
-                    </h3>
-                    <div class="card-body">
-                        <h5 class="card-title" id="cityName"><img id="wIcon" src="" alt="Weather icon">
-                        </h5>
-                        <h4 id="temp">This is the Temp</h4>
-                        <h4 id="hum">Humidity</h4>
-                        <h4 id="wind">Wind Speed</h4>
-                        <h4 id="uv">UV Index</h4>
-                    </div>
-                    <div class="card-footer text-muted">
-                        Todays Up To Date Forecast
-                    </div>
-                </div>
-            </section>
-        </section>
+    <section class="container">
+        <!-- Search For City -->
         <section class="row">
-            <section class="col-sm-2">
-                <!-- placeholder -->
+            <section class="col-sm-4 mt-4">
+                <h5 class="searchHeader">Search City Name</h5>  
+                <form class="form-inline col-sm-4">
+                    <div class="form-group">
+                        <label for="userInput" class="sr-only">City Name</label>
+                        <input type="search" class="form-control border border-dark col-sm" id="userInput" placeholder="City Name">
+                        <button type="submit" class="btn btn-primary m-2" id="searchBtn">Search
+                        </button> 
+                    </div>
+                </form>
+            <!-- End of Search Box -->
+                <p id="city-list-prepend"></p> 
+            <!-- History of Cities -->
+                <button class="btn btn-primary mt-2 pt-2" type="button" id="clear-history">Clear History</button>
             </section>
+            <!-- Last City Searched/Current Weather -->
+            <section class="col-sm-8">
+                <section class="row">
+                    <div class="col border border-dark m-3 mt-4 rounded" id="mainW">
+                        <div class="row">
+                            <div class="col-12 mt-3">
+                                <h3 id="currentCityName"></h3>
+                                <h4 class="cityName"></h4>
+                                <img id="wIcon" src="" alt="Weather icon">
+                            </div>
+                        </div>
+                        <section class="row">
+                            <section class="col-12">
+                                <h4 id="temp">This is the Temp</h4>
+                            </section>
+                        </section>
+                        <section class="row">
+                            <section class="col-12">
+                                <h4 id="hum">Humidity</h4>
+                            </section>
+                        </section>
+                        <section class="row">
+                            <section class="col-12">
+                                <h4 id="wind">Wind Speed</h4>
+                            </section>
+                        </section>
+                        <section class="row">
+                            <section class="col-12 mb-3">
+                                <h4 id="uv">UV Index</h4>
+                            </section>
+                        </section>
+                    </div>
+                </section>
+                <!-- The Start of 5 Day Forecast -->
+                <section class="row">
+                    <section class="col-12">
+                        <h4> 5 Day Forecast </h4>
+                    </section>
+                </section>
 
-            <!-- 5 Day Forecast -->
-            <section class="col-sm-2" id="d1">
-                <div class="card" style="width: 18rem;height: auto;">
-                    <div class="card-body">
-                        <h5 class="card-title" id="nextDay">Card title</h5>
-                        <p class="card-text"><img id="wIcon1" src="" alt="Weather icon"></p>
+                <!-- 5 Day Forecast -->
+                <section class="row">
+                    <section class="col-sm border m-1 p-1 border-dark rounded" id="d1">
+                        <h5 id="nextDay">(00/00/2020)</h5>
+                        <p><img id="wIcon1" src="" alt="Weather icon"></p>
                         <p id="temp1"></p>
                         <p id="hum1"></p>
-                    </div>
-                </div>
-            </section>
-            <section class="col-sm-2" id="d2">
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title" id="day2">Card title</h5>
-                        <p class="card-text"><img id="wIcon2" src="" alt="Weather icon"></p>
+                    </section>
+                    <section class="col-sm border m-1 p-1 border-dark rounded" id="d2">
+                        <h5 id="day2">(00/00/2020)</h5>
+                        <p><img id="wIcon2" src="" alt="Weather icon"></p>
                         <p id="temp2"></p>
                         <p id="hum2"></p>
-                    </div>
-                </div>
-            </section>
-            <section class="col-sm-2" id="d3">
-                <div class="card" style="width: 18rem;">
-                    <div class="card-body">
-                        <h5 class="card-title" id="day3">Card title</h5>
-                        <p class="card-text"><img id="wIcon3" src="" alt="Weather icon"></p>
+                    </section>
+                    <section class="col-sm border m-1 p-1 border-dark rounded" id="d3">
+                        <h5 id="day3">(00/00/2020)</h5>
+                        <p><img id="wIcon3" src="" alt="Weather icon"></p>
                         <p id="temp3"></p>
                         <p id="hum3"></p>
-                    </div>
-                </div>
-            </section>
-            <section class="col-sm-2" id="d4">
-                <div class="card" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title" id="day4">Card title</h5>
-                    <p class="card-text"><img id="wIcon4" src="" alt="Weather icon"></p>
-                    <p id="temp4"></p>
-                    <p id="hum4"></p>
-                </div>
-                </div>
-            </section>
-            <section class="col-sm-2" id="d5">
-                <div class="card" style="width: 18rem; height: max-content;">
-                <div class="card-body">
-                    <h5 class="card-title" id="day5">Card title</h5>
-                    <p class="card-text"><img id="wIcon5" src="" alt="Weather icon"></p>
-                    <p id="temp5"></p>
-                    <p id="hum5"></p>
-                </div>
-                </div>
+                    </section>
+                    <section class="col-sm border m-1 p-1 border-dark rounded" id="d4">
+                        <h5 id="day4">(00/00/2020)</h5>
+                        <p><img id="wIcon4" src="" alt="Weather icon"></p>
+                        <p id="temp4"></p>
+                        <p id="hum4"></p>
+                    </section>
+                    <section class="col-sm border m-1 p-1 border-dark rounded" id="d5">
+                        <h5 id="day5">(00/00/2020)</h5>
+                        <p><img id="wIcon5" src="" alt="Weather icon"></p>
+                        <p id="temp5"></p>
+                        <p id="hum5"></p>
+                    </section>
+                </section>
             </section>
         </section>
     </section>
+<!-- End of 5 Day -->
+<!-- Footer -->
+<footer class="footer">
 
-
-
-
-
-
-
-
-
-
-
+    <!-- Copyright -->
+    <div class="footer text-center">© 2020 Copyright
+    </div>
+    
+  
+</footer>
+  <!-- Footer -->
 
 
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -133,7 +127,7 @@
 
 
 
-    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="Assets/script.js"></script>
 </body>
 
 </html>
