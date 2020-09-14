@@ -1,0 +1,38 @@
+#d1 {
+    
+    background-color: skyblue;
+    border: slategray; 
+    border-width: thin medium thick 10px
+}
+
+#d2 {
+    color: silver;
+    background-color: royalblue;
+    border: slategray; 
+    border-width: thin medium thick 10px
+
+}
+
+#d3 {
+    color: silver;
+    background-color: slateblue;
+    border: slategray; 
+    border-width: thin medium thick 10px
+
+}
+
+#d4 {
+    color: silver;
+    background-color: steelblue;
+    border: slategray; 
+    border-width: thin medium thick 10px
+
+}
+
+#d5 {
+    
+    background-color: silver;
+    border: slategray; 
+    border-width: thin medium thick 10px
+
+}
