@@ -1,3 +1,7 @@
+// Getting recent city searches and placing them as buttons
+
+
+
 
 var searchHistory = JSON.parse(localStorage.getItem("search")) || [];
 renderButtons();
@@ -7,9 +11,10 @@ renderButtons();
 
 
 
+
+
+// the function that contains the ajax and api call
 function displayCurrentWeather(city) {
-
-
 
 
 
@@ -31,8 +36,8 @@ function displayCurrentWeather(city) {
         method: "GET"
     }).then(function (weather) {
 
-
-
+        console.log(weather.ok)
+        // To place into the one call API
         var lat = weather.coord.lat
         var lon = weather.coord.lon
 
@@ -42,7 +47,10 @@ function displayCurrentWeather(city) {
             method: "GET"
         }).then(function (response) {
 
-            console.log(response)
+
+
+
+            console.log(response.ok)
 
             // Main Card
             var iconId = (response.current.weather[0].icon)
@@ -112,7 +120,7 @@ function displayCurrentWeather(city) {
         });
     });
 }
-
+// Display recent cities as buttons
 function renderButtons() {
 
     $("#city-list-prepend").empty();
@@ -121,36 +129,36 @@ function renderButtons() {
         var recentCity = $("#city-list-prepend")
         newRow = $("<li>")
         var cb = $("<button>")
-        var hr = $("<br>")
+        var br = $("<br>")
         cb.addClass("city-btn btn btn-success");
         cb.text(searchHistory[i]).val();
         newRow.append(cb)
         $(recentCity).prepend(cb)
-        $(recentCity).prepend(hr)
+        $(recentCity).prepend(br)
     }
 }
-
+// if the local storage is not empty display the last one
 if (searchHistory.length > 0) {
     displayCurrentWeather(searchHistory[searchHistory.length - 1]);
 }
-
+// Clear History Button
 $("#clear-history").on("click", function () {
     localStorage.clear();
     $("#city-list-prepend").empty();
 
 })
-
+// Search Button
 $("#searchBtn").on("click", function (event) {
     event.preventDefault();
     var searchCity = $("#userInput").val();
     console.log(searchCity);
 
-    if ((searchCity === "") || (searchHistory === 404)) {
+    if (searchCity === "") {
         console.log("Field must be entered")
 
     } else {
 
-        searchHistory.push(searchCity)
+        searchHistory.push(searchCity);
         localStorage.setItem("search", JSON.stringify(searchHistory));
         displayCurrentWeather(searchCity);
         location.reload();
@@ -158,7 +166,7 @@ $("#searchBtn").on("click", function (event) {
     }
 
 });
-
+// The recent cities
 $(".city-btn").on("click", function (event) {
     event.preventDefault();
     var recentCityBtn = $(this).text();
