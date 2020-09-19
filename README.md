@@ -14,6 +14,11 @@ Starting this project I was very prepared to create something from scratch. I th
 
 **https://lambaa94.github.io/Weather-Dashboard/**
 
+## License
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+
 ## Credits
 
 * Open Weather API
