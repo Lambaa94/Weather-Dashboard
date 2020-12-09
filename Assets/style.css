@@ -62,28 +62,34 @@ html, body {
 .city-btn {
     width: 80%;
     float: left;
-    box-shadow: 4px 4px 5px 0 rgb(69, 136, 136);
+    border-radius: 5px;
 }
 
 .city-btn:hover {
-    box-shadow: 4px 4px 5px 0 rgb(69, 136, 136)
+    box-shadow: 4px 4px 5px 0 rgb(69, 136, 136);
+    
 }
 
 #searchBtn {
     width: 80%;
     text-align: center;
-    
+    border-radius: 5px;
 }
 
 #searchBtn:hover {
-    box-shadow: 4px 4px 5px 0 rgb(69, 136, 136)
+    box-shadow: 4px 4px 5px 0 rgb(79, 79, 79);
+    background-color: rgb(69, 136, 136);
+    
 }
 
 #clear-history {
     width : 80%;
     box-shadow: rgb(69, 136, 136);
+    border-radius: 5px;
 }
 
 #clear-history:hover {
-    box-shadow: 4px 4px 5px 0 rgb(69, 136, 136)
+    box-shadow: 4px 4px 5px 0 rgb(79, 79, 79);
+    background-color: rgb(69, 136, 136);
+    
 }
