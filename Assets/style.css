@@ -8,6 +8,7 @@ html, body {
     background-color: slategray;
     
     justify-content: center;
+    box-shadow: 0px 4px 0px 0 rgba(68, 66, 66, 0.673)
 }
 
 .footer {
@@ -16,20 +17,21 @@ html, body {
 
 #mainW {
     background-color: turquoise;
+    box-shadow: 4px 4px 5px 0; 
 }
 
 
 #d1 {
     
     background-color: skyblue;
-   
+    box-shadow: 4px 4px 5px 0 rgb(69, 136, 136) 
     
 }
 
 #d2 {
     color: silver;
     background-color: royalblue;
- 
+    box-shadow: 4px 4px 5px 0 rgb(69, 136, 136) 
    
 
 }
@@ -37,7 +39,7 @@ html, body {
 #d3 {
     color: silver;
     background-color: slateblue;
-  
+    box-shadow: 4px 4px 5px 0 rgb(69, 136, 136)
     
 
 }
@@ -45,7 +47,7 @@ html, body {
 #d4 {
     color: silver;
     background-color: steelblue;
-    
+    box-shadow: 4px 4px 5px 0 rgb(69, 136, 136)
    
 
 }
@@ -53,23 +55,35 @@ html, body {
 #d5 {
     
     background-color: silver;
-    
+    box-shadow: 4px 4px 5px 0 rgb(69, 136, 136) 
 
 }
 
 .city-btn {
     width: 80%;
     float: left;
-    box-shadow: rgb(69, 136, 136);
+    box-shadow: 4px 4px 5px 0 rgb(69, 136, 136);
+}
+
+.city-btn:hover {
+    box-shadow: 4px 4px 5px 0 rgb(69, 136, 136)
 }
 
 #searchBtn {
     width: 80%;
     text-align: center;
-    box-shadow: rgb(69, 136, 136);
+    
+}
+
+#searchBtn:hover {
+    box-shadow: 4px 4px 5px 0 rgb(69, 136, 136)
 }
 
 #clear-history {
     width : 80%;
     box-shadow: rgb(69, 136, 136);
+}
+
+#clear-history:hover {
+    box-shadow: 4px 4px 5px 0 rgb(69, 136, 136)
 }
