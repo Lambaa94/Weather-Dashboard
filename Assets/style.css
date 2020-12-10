@@ -10,6 +10,7 @@ html, body {
     justify-content: center;
     box-shadow: 0px 4px 0px 0 rgba(68, 66, 66, 0.673)
 }
+ 
 
 .footer {
     background-color: slategray;
@@ -60,7 +61,7 @@ html, body {
 }
 
 .city-btn {
-    width: 80%;
+    
     float: left;
     border-radius: 5px;
 }
@@ -70,8 +71,14 @@ html, body {
     
 }
 
+#userInput {
+    width: 250px;
+    border-radius: 5px
+}
+
+
 #searchBtn {
-    width: 80%;
+    
     text-align: center;
     border-radius: 5px;
 }
@@ -83,7 +90,7 @@ html, body {
 }
 
 #clear-history {
-    width : 80%;
+    /* width : 80%; */
     box-shadow: rgb(69, 136, 136);
     border-radius: 5px;
 }
@@ -93,3 +100,25 @@ html, body {
     background-color: rgb(69, 136, 136);
     
 }
+
+@media screen and ( min-width: 200px ) and ( max-width: 576px ) {
+    #userInput, .searchSection, #clear-history, .city-btn, #searchBtn, .form-group { width: 100%; justify-content: center; align-items: center;} 
+    
+    }
+
+@media screen and ( min-width: 576px ) and ( max-width: 767px ) {
+    #clear-history, #userInput, .city-btn, #searchBtn { width: 495px }
+    }
+
+@media screen and ( min-width: 768px ) and ( max-width: 991px ) {
+    #clear-history, #userInput, .city-btn, #searchBtn { width: 675px }
+    }
+
+@media screen and ( min-width: 992px ) and ( max-width: 1999px ) {
+    #clear-history, #userInput, .city-btn, #searchBtn { width: 220px }
+    }
+
+@media screen and ( min-width: 1200px ) {
+    #clear-history, #userInput, .city-btn, #searchBtn { width: 250px }
+    }
+    
